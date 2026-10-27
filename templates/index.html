@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CREWLINK Salary</title>
+<style>
+:root{--navy:#10243a;--blue:#2457a7;--pale:#edf3fb;--line:#d8e0ea;--ink:#172435;--muted:#637083;--green:#087f5b}
+*{box-sizing:border-box}body{margin:0;background:#f3f6fa;color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+header{background:linear-gradient(120deg,#10243a,#2457a7);color:white;padding:28px max(18px,calc((100% - 1180px)/2));}header .brand{font-weight:800;letter-spacing:.13em;font-size:13px;color:#bcd4ff}h1{margin:7px 0 4px;font-size:clamp(25px,4vw,36px)}header p{margin:0;color:#e0eaff}.wrap{max-width:1180px;margin:24px auto;padding:0 16px 45px}.notice{background:#fff8e6;border:1px solid #f2d18a;border-radius:12px;padding:13px 16px;margin-bottom:18px;font-size:14px;line-height:1.5}.grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(320px,.9fr);gap:18px;align-items:start}.card{background:white;border:1px solid var(--line);border-radius:16px;box-shadow:0 6px 20px #1b34500b;overflow:hidden}.cardhead{padding:17px 20px;border-bottom:1px solid var(--line);font-weight:750;font-size:17px}.inside{padding:18px 20px}.section{font-size:12px;font-weight:800;color:var(--blue);letter-spacing:.08em;margin:17px 0 10px;text-transform:uppercase}.section:first-child{margin-top:0}.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field{min-width:0}.field.full{grid-column:1/-1}label{display:block;font-size:12px;font-weight:650;color:#475569;margin-bottom:5px}input,select{width:100%;border:1px solid #cbd5e1;border-radius:9px;padding:10px 11px;font:inherit;font-size:14px;background:#fff;color:var(--ink)}input:focus,select:focus{outline:2px solid #9dc1ff;border-color:var(--blue)}.checks{display:flex;gap:18px;flex-wrap:wrap;margin:16px 0}.checks label{display:flex;align-items:center;gap:8px;font-size:13px;margin:0}.checks input{width:auto}.btn{border:0;border-radius:10px;padding:12px 16px;font-weight:750;cursor:pointer;font-size:14px}.primary{background:var(--blue);color:white;flex:1}.reset{background:#fff1f2;color:#9f1239;border:2px solid #e11d48;width:100%;margin-top:10px}.actions{display:flex;gap:10px;align-items:stretch;flex-wrap:wrap}.actions .btn{min-height:44px}.secondary{background:#e9f0fc;color:#1d4d92;width:100%;margin-top:10px}.error{background:#fff0f0;color:#9f2020;border:1px solid #f1b9b9;padding:12px;border-radius:10px;margin-bottom:14px}.result-top{background:var(--navy);color:white;padding:22px}.result-top small{color:#c7d6e9}.net{font-size:clamp(30px,4vw,42px);font-weight:850;margin-top:5px;letter-spacing:-.03em}.summary{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:16px 20px}.stat{background:#f5f8fc;border-radius:10px;padding:12px}.stat small{display:block;color:var(--muted);font-size:12px}.stat strong{display:block;margin-top:4px;font-size:18px}.rows{padding:0 20px 20px}.rows h3{font-size:14px;margin:12px 0}.row{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #edf0f4;padding:8px 0;font-size:13px}.row span:last-child{font-variant-numeric:tabular-nums;text-align:right;font-weight:650}.fine{font-size:12px;line-height:1.55;color:var(--muted);margin-top:16px}.empty{padding:32px 22px;color:var(--muted);line-height:1.6}.footer{text-align:center;color:#748094;font-size:12px;margin-top:20px}
+@media(max-width:850px){.grid{grid-template-columns:1fr}.resultcard{order:-1}}@media(max-width:500px){.fields{grid-template-columns:1fr}.field.full{grid-column:auto}.inside{padding:15px}.wrap{margin-top:15px}.summary{padding:12px}.rows{padding:0 14px 16px}}
+
+/* Sezioni del riepilogo stipendio */
+.category-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 22px 0 8px;
+    padding: 10px 12px;
+    background: var(--pale);
+    color: var(--navy);
+    border-left: 4px solid var(--blue);
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.category-title:first-child {
+    margin-top: 12px;
+}
+
+.category-rows {
+    margin-bottom: 12px;
+}
+
+.category-rows .row {
+    padding: 9px 4px;
+}
+
+.category-rows .row span:first-child {
+    color: var(--ink);
+}
+
+.category-rows .row span:last-child {
+    white-space: nowrap;
+}
+
+.category-title.tfr {
+    background: #e8f5ef;
+    border-left-color: var(--green);
+}
+
+.category-title.imposte {
+    background: #fff5e8;
+    border-left-color: #d97706;
+}
+
+.category-title.detrazioni {
+    background: #e8f5ef;
+    border-left-color: var(--green);
+}
+
+@media(max-width:500px) {
+    .category-title {
+        margin-top: 17px;
+        font-size: 12px;
+    }
+}
+
+
+</style></head><body>
+<header><div class="brand">✈ CREWLINK</div><h1>Calcolatore Stipendio</h1><p>Calcolo stipendio mensile · V1.0 Web Edition</p></header>
+<div class="wrap">
+<div class="grid"><section class="card"><div class="cardhead">Dati per il calcolo</div><div class="inside">
+{% if error %}<div class="error">{{ error }}</div>{% endif %}
+<form id="calcform" method="post" action="/calcola">
+<div class="section">📋 Generale</div><div class="fields">
+<div class="field"><label for="CrewCode">CrewCode *</label><input id="CrewCode" name="CrewCode" required value="{{ form.get('CrewCode','') }}" maxlength="40"></div>
+<div class="field"><label for="Base">Base *</label><input id="Base" name="Base" required value="{{ form.get('Base','') }}" maxlength="40"></div>
+<div class="field"><label for="Mese">Mese di riferimento</label><select id="Mese" name="Mese">{% for m in mesi %}<option {% if form.get('Mese',mese_default)==m %}selected{% endif %}>{{m}}</option>{% endfor %}</select></div>
+<div class="field"><label for="DataAssunzione">Data assunzione * (GG/MM/AAAA)</label><input id="DataAssunzione" name="Data Assunzione" placeholder="01/01/2020" required value="{{ form.get('Data Assunzione','') }}"></div>
+</div>
+<div class="section">✈ Ore di volo</div><div class="fields">
+<div class="field"><label>Ore volo</label><input type="number" min="0" step="any" name="Ore Volo" value="{{form.get('Ore Volo','')}}"></div><div class="field"><label>Minuti</label><input type="number" min="0" max="59" step="1" name="Minuti" value="{{form.get('Minuti','')}}"></div></div>
+<div class="checks"><label><input type="checkbox" name="high_hours" {% if form.get('high_hours') %}checked{% endif %}> Ore annue volate &gt; 600h</label></div>
+<div class="section">💶 Diarie</div><div class="fields"><div class="field"><label>Diarie volate (Flight)</label><input type="number" min="0" step="1" name="Diarie Volate" value="{{form.get('Diarie Volate','')}}"></div><div class="field"><label>Diarie non volate (HSBY, AD, GD, SD, DH)</label><input type="number" min="0" step="1" name="Diarie Non Volate" value="{{form.get('Diarie Non Volate','')}}"></div></div>
+<div class="section">📋 Variabili</div><div class="fields">
+{% for name in ['Annual Leave','Night Stop','Landing 01:00-02:29','Landing 02:30-03:59','Training Day','Sales Bonus'] %}<div class="field"><label>{{name}}</label><input type="number" min="0" step="any" name="{{name}}" value="{{form.get(name,'')}}"></div>{% endfor %}
+</div><div class="section">➖ Trattenute / assenze</div><div class="fields">
+{% for name in ['VTO prima del 15','VTO dopo il 15','Sickness','Sospensioni/N-S/Lates'] %}<div class="field"><label>{{name}}</label><input type="number" min="0" step="1" name="{{name}}" value="{{form.get(name,'')}}"></div>{% endfor %}
+</div><div class="section">🧾 Tassazione</div><div class="fields">
+<div class="field"><label>Reddito CUD</label><input type="number" min="0" step="any" name="Reddito CUD" value="{{form.get('Reddito CUD','')}}"></div><div class="field"><label>Acconto Addizionale 2026 (€)</label><input type="number" min="0" step="any" name="Acconto Addizionale 2026" value="{{form.get('Acconto Addizionale 2026','')}}"></div><div class="field"><label>Rimborsi 730 (€)</label><input type="number" min="0" step="any" name="Rimborsi 730" value="{{form.get('Rimborsi 730','')}}"></div><div class="field"><label for="Comune">Comune di residenza *</label><input id="Comune" name="Comune" list="comuni" required autocomplete="off" placeholder="Digita per cercare il comune" value="{{form.get('Comune','')}}"><datalist id="comuni">{% for c in comuni %}<option value="{{c}}">{% endfor %}</datalist></div>
+</div><div class="checks"><label><input type="checkbox" name="sindacato" {% if form.get('sindacato') %}checked{% endif %}> Iscritto al sindacato</label><label><input type="checkbox" name="ctr_vol" {% if form.get('ctr_vol') %}checked{% endif %}> CTR volontario</label></div>
+<div class="actions"><button class="btn primary" type="submit">CALCOLA STIPENDIO</button></div><a class="btn reset" href="/" role="button" style="display:flex;align-items:center;justify-content:center;text-decoration:none;box-sizing:border-box">↺ RESET TUTTI I CAMPI</a></form>
+{% if result %}<form method="post" action="/pdf" target="_blank">{% for k,v in form.items() %}<input type="hidden" name="{{k}}" value="{{v}}">{% endfor %}<button class="btn secondary" type="submit">⬇ Scarica riepilogo PDF</button></form>{% endif %}
+<div class="fine">Privacy: i dati inseriti non vengono salvati in un profilo né in un archivio dell'applicazione; il calcolo viene eseguito per la richiesta corrente.</div>
+</div></section>
+<section class="card resultcard"><div class="cardhead">Risultato</div>{% if result %}<div class="result-top"><small>NETTO STIMATO IN BUSTA</small><div class="net">€ {{ '{:,.2f}'.format(result.netto).replace(',', 'X').replace('.', ',').replace('X','.') }}</div><small>{{result.mese}} {{result.anno}} · {{result.crew}} · {{result.base}}</small></div><div class="summary"><div class="stat"><small>Totale competenze</small><strong>€ {{'{:,.2f}'.format(result.competenze).replace(',', 'X').replace('.', ',').replace('X','.')}}</strong></div><div class="stat"><small>Totale trattenute</small><strong>€ {{'{:,.2f}'.format(result.trattenute).replace(',', 'X').replace('.', ',').replace('X','.')}}</strong></div><div class="stat"><small>Comune / Regione</small><strong style="font-size:14px">{{result.comune}}</strong></div><div class="stat"><small>Anni di servizio</small><strong>{{result.anni}}</strong></div></div>
+<div class="rows">
+
+    <h3>Dettaglio calcolo</h3>
+
+    {% for categoria, voci in result['riepilogo'].items() %}
+
+        <div class="category-title {{ categoria|lower|replace(' ', '-') }}">
+            {% if categoria == 'Competenze' %}
+                💶
+            {% elif categoria == 'Contributi' %}
+                🛡️
+            {% elif categoria == 'Imposte' %}
+                🧾
+            {% elif categoria == 'Detrazioni' %}
+                ➖
+            {% elif categoria == 'Trattenute' %}
+                📉
+            {% elif categoria == 'TFR' %}
+                🏦
+            {% endif %}
+
+            {{ categoria }}
+        </div>
+
+        <div class="category-rows">
+            {% for label, value in voci %}
+                <div class="row">
+                    <span>{{ label }}</span>
+                    <span>
+                        € {{ '{:,.2f}'.format(value).replace(',', 'X').replace('.', ',').replace('X', '.') }}
+                    </span>
+                </div>
+            {% endfor %}
+        </div>
+
+    {% endfor %}
+
+    <div class="fine">
+        Aliquota comunale: {{ result.aliquota_comunale }}%
+        · Aliquota regionale: {{ result.aliquota_regionale }}%.
+        <br>
+        Database regionale: anno 2026.
+    </div>
+
+</div>
+
+{% else %}<div class="empty"><strong>Il tuo riepilogo apparirà qui.</strong><br>Compila i dati a sinistra e premi “Calcola stipendio netto”. Potrai quindi scaricare il riepilogo in PDF.</div>{% endif %}</section></div><div class="footer">CREWLINK Salary Calculator · Web edition ·</div></div>
+</body></html>
